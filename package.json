@@ -1,0 +1,19 @@
+{
+  "name": "babel-runtime-works",
+  "version": "1.0.0",
+  "description": "How babel-runtime works",
+  "main": "index.js",
+  "author": "Okan Jauhary <me@okanjauhary.space> (https://okanjauhary.space)",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:with && yarn build:without",
+    "build:with": "babel index.js -o index-with-runtime.js --presets=@babel/preset-env --plugins=@babel/plugin-transform-runtime",
+    "build:without": "babel index.js -o index-without-runtime.js --presets=@babel/preset-env"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0"
+  }
+}
